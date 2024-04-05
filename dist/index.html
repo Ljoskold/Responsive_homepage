@@ -4,12 +4,11 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="stylesheet" href="styles.css" />
-		<title>Homepage</title>
+		<title>Responisve homepage</title>
 	<script defer src="bundle.js"></script></head>
 	<body>
 		<header>
 			<div class="avatar-wrapper">
-				<!-- <img id="picture" src="./images/main-photo.jpg" /> -->
 				<span id="name">John Doe</span>
 			</div>
 			<div class="about">
@@ -34,7 +33,7 @@
 			</div>
 		</header>
 		<div class="main-container">
-			<h1>My work</h1>
+			<h1>My works</h1>
 			<div class="portfolio-container">
 				<div class="card" id="card-1">
 					<img src="" alt="" />
@@ -52,7 +51,12 @@
 								/>
 							</div>
 						</div>
-						<div class="card-info"></div>
+						<div class="card-info">
+							<p>
+								Short description of the project. Just a couple
+								sentences will do.
+							</p>
+						</div>
 					</div>
 				</div>
 				<div class="card" id="card-2">
@@ -71,7 +75,12 @@
 								/>
 							</div>
 						</div>
-						<div class="card-info"></div>
+						<div class="card-info">
+							<p>
+								Short description of the project. Just a couple
+								sentences will do.
+							</p>
+						</div>
 					</div>
 				</div>
 				<div class="card" id="card-3">
@@ -90,7 +99,12 @@
 								/>
 							</div>
 						</div>
-						<div class="card-info"></div>
+						<div class="card-info">
+							<p>
+								Short description of the project. Just a couple
+								sentences will do.
+							</p>
+						</div>
 					</div>
 				</div>
 				<div class="card" id="card-4">
@@ -109,7 +123,12 @@
 								/>
 							</div>
 						</div>
-						<div class="card-info"></div>
+						<div class="card-info">
+							<p>
+								Short description of the project. Just a couple
+								sentences will do.
+							</p>
+						</div>
 					</div>
 				</div>
 				<div class="card" id="card-5">
@@ -128,7 +147,12 @@
 								/>
 							</div>
 						</div>
-						<div class="card-info"></div>
+						<div class="card-info">
+							<p>
+								Short description of the project. Just a couple
+								sentences will do.
+							</p>
+						</div>
 					</div>
 				</div>
 				<div class="card" id="card-6">
@@ -147,7 +171,12 @@
 								/>
 							</div>
 						</div>
-						<div class="card-info"></div>
+						<div class="card-info">
+							<p>
+								Short description of the project. Just a couple
+								sentences will do.
+							</p>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -179,7 +208,7 @@
 							alt=""
 							style="width: 40px; height: 40px"
 						/>
-						<span></span>johndoe.s.not.real@gmail.com
+						<span></span>johndoe.@gmail.com
 					</p>
 					<br />
 					<div class="footer-icons">
@@ -189,7 +218,15 @@
 					</div>
 				</div>
 				<img
-					src="./images/footer-picture.jpg"
+					src="./images/footer-main.jpg"
+					srcset="
+						./images/footer-main-1024-683.jpg 1024w,
+						./images/footer-main-758-505.jpg   758w,
+						./images/footer-main.jpg          1640w
+					"
+					sizes="(max-width: 758px) 758px,
+					(max-width: 1024px) 1024px,
+					1640px"
 					alt="business-man picture"
 					id="footer-picture"
 				/>

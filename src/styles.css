@@ -3,10 +3,12 @@
 	margin: 0;
 	padding: 0;
 }
+@font-face {
+	font-family: Roboto;
+	src: url(./fonts/Roboto-Regular.ttf);
+}
 body {
-	display: flex;
-	flex-direction: column;
-	font-family: 'Courier New', Courier, monospace;
+	font-family: Roboto;
 }
 header {
 	padding: 80px 80px 80px 80px;
@@ -17,6 +19,7 @@ header {
 		rgba(15, 51, 92, 1) 56.6%
 	);
 	overflow: hidden;
+	margin-bottom: 90px;
 }
 header::after {
 	content: '';
@@ -42,7 +45,7 @@ header::after {
 	display: flex;
 	width: 550px;
 	min-height: 550px;
-	background-image: url(./images/main-photo.jpg);
+	background-image: url(./images/main.jpg);
 	background-size: cover;
 	background-position: center;
 	float: left;
@@ -90,6 +93,7 @@ header::after {
 }
 .main-container h1 {
 	padding-left: 80px;
+	font-size: 3rem;
 }
 .portfolio-container {
 	padding: 30px 80px 120px 80px;
@@ -109,10 +113,11 @@ header::after {
 .links {
 	display: flex;
 	justify-content: space-between;
-	padding: 20px 20px;
+	padding: 20px 20px 10px 20px;
 }
 .links span {
 	font-size: 1.5rem;
+	font-weight: 500;
 }
 .project-icons {
 	display: flex;
@@ -147,6 +152,10 @@ header::after {
 .links-wrapper {
 	height: 35%;
 	background-color: white;
+}
+.card-info {
+	padding: 0 20px 20px;
+	font-size: 1.1rem;
 }
 footer {
 	padding: 30px 80px 30px 80px;
@@ -194,7 +203,11 @@ footer {
 	height: 64px;
 }
 @media screen and (max-width: 1024px) {
+	header {
+		margin-bottom: 10px;
+	}
 	.avatar-wrapper {
+		background-image: url(./images/main-1024x683.jpg);
 		max-width: 450px;
 		max-height: 500px;
 		flex-shrink: 1;
@@ -207,6 +220,9 @@ footer {
 	}
 }
 @media screen and (max-width: 758px) {
+	header {
+		margin-bottom: 20px;
+	}
 	body {
 		align-items: center;
 	}
@@ -214,6 +230,7 @@ footer {
 		background-color: rgb(88, 0, 35);
 		display: flex;
 		flex-direction: column;
+		align-items: center;
 		padding: 10px 10px 10px 10px;
 	}
 	header::after {
@@ -227,6 +244,7 @@ footer {
 		transform: rotate(-11deg) translate(-70px, 15px);
 	}
 	.avatar-wrapper {
+		background-image: url(./images/main-758x505.jpg);
 		min-width: 350px;
 		min-height: 300px;
 		flex-shrink: 1;
@@ -235,9 +253,18 @@ footer {
 		margin-left: 40px;
 	}
 	.about {
+		min-width: 250px;
+		padding: 0 30px;
+		font-size: 1.3rem;
+	}
+	.portfolio-container {
+		padding: 0 20px;
+		padding-bottom: 40px;
 		min-width: 350px;
-		min-height: 300px;
-		flex-shrink: 1;
+		justify-content: center;
+	}
+	footer {
+		padding: 0 10px;
 	}
 	#footer-picture {
 		width: 100%;
