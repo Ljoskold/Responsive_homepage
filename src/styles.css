@@ -1,0 +1,247 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+body {
+	display: flex;
+	flex-direction: column;
+	font-family: 'Courier New', Courier, monospace;
+}
+header {
+	padding: 80px 80px 80px 80px;
+	position: relative;
+	background-image: linear-gradient(
+		30deg,
+		rgba(15, 51, 92, 1) 56.6%,
+		rgba(15, 51, 92, 1) 56.6%
+	);
+	overflow: hidden;
+}
+header::after {
+	content: '';
+	position: absolute;
+	height: 500px;
+	width: 110%;
+	background-color: rgb(255, 255, 255);
+	bottom: 0;
+	left: 0;
+	transform: rotate(-11deg) translate(-50px, 300px);
+}
+#name {
+	background-color: rgba(0, 0, 0, 0.495);
+	font-size: 5rem;
+	color: white;
+	float: left;
+	width: 100%;
+	text-align: center;
+	border-radius: 3px;
+}
+.avatar-wrapper {
+	position: relative;
+	display: flex;
+	width: 550px;
+	min-height: 550px;
+	background-image: url(./images/main-photo.jpg);
+	background-size: cover;
+	background-position: center;
+	float: left;
+	z-index: 2;
+	justify-content: center;
+	align-items: flex-end;
+	margin-right: 20px;
+	border-radius: 3px;
+}
+.icons {
+	display: flex;
+	flex-direction: row;
+	gap: 30px;
+	margin-bottom: 30px;
+	justify-content: end;
+	padding-top: 20px;
+}
+.icons img {
+	width: 48px;
+	height: 48px;
+}
+.about {
+	display: block;
+	max-width: 1900px;
+	position: relative;
+	min-height: 450px;
+	padding: 0px 40px 20px 0px;
+	background-color: white;
+	flex: 1 1 auto;
+	z-index: 1;
+	box-shadow: 5px 5px 15px lightgrey;
+	font-size: 1.7rem;
+	letter-spacing: 1px;
+	margin-top: 70px;
+	padding: 20px;
+}
+.about h1 {
+	margin-bottom: 20px;
+}
+.main-container {
+	background-color: rgb(255, 255, 255);
+	display: flex;
+	flex-direction: column;
+	z-index: 0;
+}
+.main-container h1 {
+	padding-left: 80px;
+}
+.portfolio-container {
+	padding: 30px 80px 120px 80px;
+	overflow: hidden;
+	display: grid;
+	grid-auto-rows: 400px;
+	gap: 40px;
+	grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+}
+.card {
+	display: flex;
+	flex-direction: column;
+	background-color: rgb(255, 255, 255);
+	box-shadow: 5px 5px 20px rgb(175, 175, 175);
+	border-radius: 3px;
+}
+.links {
+	display: flex;
+	justify-content: space-between;
+	padding: 20px 20px;
+}
+.links span {
+	font-size: 1.5rem;
+}
+.project-icons {
+	display: flex;
+	flex-direction: row;
+}
+.project-icons img {
+	width: 40px;
+	height: 40px;
+	background-color: none;
+}
+.card img {
+	height: 65%;
+}
+#card-1 {
+	background-color: greenyellow;
+}
+#card-2 {
+	background-color: brown;
+}
+#card-3 {
+	background-color: green;
+}
+#card-4 {
+	background-color: palevioletred;
+}
+#card-5 {
+	background-color: orange;
+}
+#card-6 {
+	background-color: skyblue;
+}
+.links-wrapper {
+	height: 35%;
+	background-color: white;
+}
+footer {
+	padding: 30px 80px 30px 80px;
+	background-image: linear-gradient(
+		0deg,
+		rgba(88, 109, 136, 1) 3.4%,
+		rgba(15, 51, 92, 1) 56.6%
+	);
+}
+.footer-content {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	height: 100%;
+	align-content: center;
+	vertical-align: middle;
+}
+.contact-me {
+	width: 45%;
+	display: flex;
+	flex-direction: column;
+	min-width: 300px;
+	justify-content: center;
+	font-size: 1.5rem;
+	color: white;
+}
+.contact-me img {
+	vertical-align: middle;
+}
+#footer-picture {
+	min-width: 300px;
+	width: 55%;
+	object-fit: cover;
+	background-color: blueviolet;
+	border-radius: 3px;
+}
+.footer-icons {
+	display: flex;
+	flex-direction: row;
+	gap: 30px;
+	margin-bottom: 30px;
+}
+.footer-icons img {
+	width: 64px;
+	height: 64px;
+}
+@media screen and (max-width: 1024px) {
+	.avatar-wrapper {
+		max-width: 450px;
+		max-height: 500px;
+		flex-shrink: 1;
+		transform: translate(-10px, 15px);
+		z-index: 2;
+	}
+	.about {
+		min-width: 700px;
+		text-align: justify;
+	}
+}
+@media screen and (max-width: 758px) {
+	body {
+		align-items: center;
+	}
+	header {
+		background-color: rgb(88, 0, 35);
+		display: flex;
+		flex-direction: column;
+		padding: 10px 10px 10px 10px;
+	}
+	header::after {
+		content: '';
+		position: absolute;
+		height: 800px;
+		width: 160%;
+		background-color: rgb(255, 255, 255);
+		bottom: 0;
+		left: 0;
+		transform: rotate(-11deg) translate(-70px, 15px);
+	}
+	.avatar-wrapper {
+		min-width: 350px;
+		min-height: 300px;
+		flex-shrink: 1;
+		transform: translate(-10px, 15px);
+		z-index: 2;
+		margin-left: 40px;
+	}
+	.about {
+		min-width: 350px;
+		min-height: 300px;
+		flex-shrink: 1;
+	}
+	#footer-picture {
+		width: 100%;
+		min-height: 500px;
+		padding: 0;
+	}
+}
